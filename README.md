@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Kafka Event-Driven Chat: Outbox Pattern & Observability
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -80,3 +81,6 @@ graph TD
     Prometheus -. "Scrape :8002" .-> Worker
     Prometheus -. "Scrape :8001" .-> Consumer
     Grafana -. "PromQL" .-> Prometheus
+=======
+# Kafka-Outbox-MessagerBroker
+>>>>>>> c64ae9853c3825987a895d02f5bae22f1fe3548c
