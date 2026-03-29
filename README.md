@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# 🚀 Kafka Event-Driven Chat: Outbox Pattern & Observability
+# 🚀 Kafka Event-Driven Chat: Outbox Pattern & Observabilidade
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -12,10 +11,6 @@
 Este projeto é uma simulação de ponta a ponta (End-to-End) de um aplicativo de mensageria em tempo real, construído sobre uma **Arquitetura Orientada a Eventos (EDA)**. 
 
 Ele soluciona o problema clássico de *Dual-Write* (dupla escrita em sistemas distribuídos) através do **Padrão Outbox (Outbox Pattern)**, garantindo consistência entre o banco de dados principal e o broker de mensageria, aliado a um monitoramento completo da saúde do sistema.
-
-## 🎯 O Desafio e a Solução
-Em microsserviços, salvar uma mensagem no banco e publicá-la no Kafka não é uma operação atômica. Uma falha de rede entre as duas ações gera inconsistência.
-Nossa solução utiliza o **Outbox Pattern**: a mensagem e o evento são gravados na mesma transação no PostgreSQL. Um *Worker* assíncrono lê essa tabela de eventos e garante a entrega ao Kafka (*At-Least-Once Delivery*), desacoplando a interface do usuário do processamento pesado.
 
 ## 🏗️ Arquitetura do Sistema
 
@@ -81,6 +76,3 @@ graph TD
     Prometheus -. "Scrape :8002" .-> Worker
     Prometheus -. "Scrape :8001" .-> Consumer
     Grafana -. "PromQL" .-> Prometheus
-=======
-# Kafka-Outbox-MessagerBroker
->>>>>>> c64ae9853c3825987a895d02f5bae22f1fe3548c
